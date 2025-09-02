@@ -1,32 +1,32 @@
-import type { NextApiRequest, NextApiResponse } from "next";
-import data from "../../../data/BCA_Programme.json"; // your JSON file
+import { promises as fs } from "fs";
+import path from "path";
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method Not Allowed" });
-  }
+export async function POST(req: Request) {
+  // Read local JSON file
+  const filePath = path.join(process.cwd(), "data", "BCA_Programme.json");
+  const jsonData = await fs.readFile(filePath, "utf-8");
+  const data = JSON.parse(jsonData);
 
-  
-
-  const body = req.body;
+  // Parse request body (from Dialogflow)
+  const body = await req.json();
   const intent = body.queryResult?.intent?.displayName;
+
   let reply = "Sorry, I don’t have information about that program.";
 
-  if (intent) {
-    const program = data.ComputerApplicationPrograms.find(
-      (p) => p.intent_name === intent
-    );
+  // Lookup program in JSON
+  const program = data.ComputerApplicationPrograms.find(
+    (p: any) => p.intent_name === intent
+  );
 
-    if (program) {
-      reply = `📘 ${program.program_name}\n` +
-              `📅 Duration: ${program.duration}\n` +
-              `🎓 Eligibility: ${program.eligibility_criteria}\n` +
-              `🏷️ Program Code: ${program.program_code}\n` +
-              `💰 First Year Fee: ${program.fees[0].fee}`;
-    }
+  if (program) {
+    reply = `📘 ${program.program_name}\n` +
+            `📅 Duration: ${program.duration}\n` +
+            `🎓 Eligibility: ${program.eligibility_criteria}\n` +
+            `💰 First Year Fee: ${program.fees[0].fee}`;
   }
 
-  return res.status(200).json({
-    fulfillmentText: reply,
-  });
+  return new Response(
+    JSON.stringify({ fulfillmentText: reply }),
+    { status: 200, headers: { "Content-Type": "application/json" } }
+  );
 }
