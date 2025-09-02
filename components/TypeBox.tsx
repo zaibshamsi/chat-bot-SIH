@@ -33,9 +33,9 @@ const TypeBox = ({ onSend }: { onSend: (msg: string) => void }) => {
 
   return (
 
-    <div className="h-35 flex flex-col bg-[#FFFFFF] p-2 pt-5.5 rounded-bl-2xl rounded-br-2xl">
+    <div className="h-35 flex flex-col bg-[#FFFFFF] p-2 pt-5.5 rounded-bl-2xl rounded-br-2xl ">
       {/*Chips section*/}
-       <div className="flex items-center justify-center h-[40px] mb-2">
+       <div className="flex items-center justify-center h-[40px] mb-2 ">
         <AnimatePresence>
           {chips.map((chip) => (
             <motion.button

@@ -22,7 +22,7 @@ export default function Home() {
         <Navbar />
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 bg-[#F8F9FA]">
+        <div className="flex-1 overflow-y-auto p-4 bg-[#F8F9FA] scrollbar-hide">
           <MessageArea messages={messages} />
         </div>
 

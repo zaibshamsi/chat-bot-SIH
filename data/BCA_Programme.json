@@ -1,0 +1,95 @@
+{
+  "ComputerApplicationPrograms": [
+    {
+      "intent_name": "program_info_bca",
+      "program_name": "Bachelor of Computer Applications",
+      "fees": [
+        {
+          "year": "1stYr",
+          "fee": "Rs 50,000"
+        },
+        {
+          "year": "2ndYr",
+          "fee": "Rs 55,000"
+        },
+        {
+          "year": "3rdYr",
+          "fee": "Rs 60,000"
+        }
+      ],
+      "eligibility_criteria": "Minimum 50% (45% for SC/ST) marks in 10+2",
+      "program_code": "BCA-001",
+      "duration": "3 Years",
+      "level": "Graduate Programme",
+      "department": "Department of Computer Applications"
+    },
+    {
+      "intent_name": "program_info_bca_ai",
+      "program_name": "Bachelor of Computer Applications (Artificial Intelligence)",
+      "fees": [
+        {
+          "year": "1stYr",
+          "fee": "Rs 1,00,000"
+        },
+        {
+          "year": "2ndYr",
+          "fee": "Rs 1,00,000"
+        },
+        {
+          "year": "3rdYr",
+          "fee": "Rs 1,00,000"
+        }
+      ],
+      "eligibility_criteria": "Minimum 50% (45% for SC/ST) marks in 10+2",
+      "program_code": "BCA-002",
+      "duration": "3 Years",
+      "level": "Graduate Programme",
+      "department": "Department of Computer Applications"
+    },
+    {
+      "intent_name": "program_info_bca_cloud",
+      "program_name": "Bachelor of Computer Applications (Cloud Computing)",
+      "fees": [
+        {
+          "year": "1stYr",
+          "fee": "Rs 1,00,000"
+        },
+        {
+          "year": "2ndYr",
+          "fee": "Rs 1,00,000"
+        },
+        {
+          "year": "3rdYr",
+          "fee": "Rs 1,00,000"
+        }
+      ],
+      "eligibility_criteria": "Minimum 50% (45% for SC/ST) marks in 10+2",
+      "program_code": "BCA-004",
+      "duration": "3 Years",
+      "level": "Graduate Programme",
+      "department": "Department of Computer Applications"
+    },
+    {
+      "intent_name": "program_info_phd_ca",
+      "program_name": "Ph.D. in computer Application",
+      "fees": [
+        {
+          "year": "1stYr",
+          "fee": "Rs 50,000"
+        },
+        {
+          "year": "2ndYr",
+          "fee": "Rs 50,000"
+        },
+        {
+          "year": "3rdYr",
+          "fee": "Rs 50,000"
+        }
+      ],
+      "eligibility_criteria": "M. Sc. or M.S. degree in (Computer Science/Information Technology/Information Science/Software Engineering/Computer Technology/Multimedia) or MCA and its related disciplines OR First Class in M.Phil. degree in the concerned subject or its equivalent grade point average in the relevant discipline any university accepted by the Syndicate as equivalent thereto. Minimum 55% (50% for SC/ST) marks in Post-Graduation.",
+      "duration": "3 Year",
+      "level": "Doctoral Programme",
+      "department": "Department of Computer Applications"
+    }
+  ]
+}
