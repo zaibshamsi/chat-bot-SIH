@@ -16,19 +16,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white flex items-center justify-center">
-      {/* 🔥 Make this a flex column container */}
       <div className="bg-[#F8F9FA] w-80 h-[600px] flex flex-col rounded-2xl border border-black">
         
-        {/* Navbar stays on top */}
+        <div>
         <Navbar />
+        </div>
 
-        {/* 🔥 Scrollable middle section */}
-        <div className="flex-1 overflow-y-auto p-4 bg-gray-100">
+        <div className="flex-1 overflow-y-auto p-4 bg-[#F8F9FA]">
           <MessageArea messages={messages} />
         </div>
 
-        {/* 🔥 Fixed at bottom */}
-        <div className="p-2 border-t rounded-br-2xl rounded-bl-2xl">
+        <div className="p-0 border-t rounded-br-2xl rounded-bl-2xl">
           <TypeBox onSend={handleSendMessage} />
         </div>
       </div>

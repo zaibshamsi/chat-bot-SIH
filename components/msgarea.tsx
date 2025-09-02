@@ -6,7 +6,7 @@ const MessageArea = ({ messages }: { messages: string[] }) => {
     
 
   return (
-           <div className="flex-1 overflow-y-auto p-2 flex flex-col ">
+           <div className="flex-1 overflow-y-auto p-2 flex flex-col"> 
           {messages.map((msg, index) => (
             <div
               key={index}
