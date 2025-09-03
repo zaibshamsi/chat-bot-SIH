@@ -62,7 +62,7 @@ const TypeBox = ({ onSend }: { onSend: (msg: string) => void }) => {
         className="flex-1 bg-transparent outline-none px-3"
         onKeyDown={handleKeyDown}
       />
-      <button onClick={handleSend}  className="p-2">
+      <button  onClick={() => handleSend("About college")} className="p-2">
         <Image src="/send.svg" alt="send" width={20} height={20} />
       </button>
     </div>
